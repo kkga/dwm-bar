@@ -13,7 +13,7 @@ dwm_resources () {
     if [ "$IDENTIFIER" = "unicode" ]; then
         printf "💻 MEM %s/%s CPU %s STO %s/%s: %s" "$MEMUSED" "$MEMTOT" "$CPU" "$STOUSED" "$STOTOT" "$STOPER"
     else
-        printf "C: %s° G: %s°/%s" "$CPU" "$GPU" "$GPU_FAN"
+        printf "C %s° G %s°/%s" "$CPU" "$GPU" "$GPU_FAN"
     fi
     printf "%s\n" "$SEP2"
 }
