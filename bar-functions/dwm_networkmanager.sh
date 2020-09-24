@@ -10,8 +10,6 @@ dwm_networkmanager () {
     CONNAME=$(nmcli -a | grep 'Wired connection' | awk 'NR==1{print $1}' | cut -c 1-7)
     if [ "$CONNAME" = "" ]; then
         CONNAME=$(nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -c 5-)
-    else
-        CONNAME="ETH"
     fi
 
     PRIVATE=$(nmcli -a | grep 'inet4 192' | awk '{print $2}')
