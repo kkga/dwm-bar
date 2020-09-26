@@ -16,11 +16,7 @@ dwm_networkmanager () {
     PUBLIC=$(curl -s https://ipinfo.io/ip)
 
     printf "%s" "$SEP1"
-    if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "🌐 %s %s | %s" "$CONNAME" "$PRIVATE" "$PUBLIC"
-    else
-        printf "%s" "$CONNAME" 
-    fi
+    printf "%s" "$CONNAME" 
     printf "%s\n" "$SEP2"
 }
 

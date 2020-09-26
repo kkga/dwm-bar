@@ -18,7 +18,7 @@ dwm_loadavg () {
     if [ "$IDENTIFIER" = "unicode" ]; then
         printf "⏱ %s" "$LOAD_AVG"
     else
-        printf "AVG %s" "$LOAD_AVG"
+        printf "%s" "$LOAD_AVG"
     fi
     printf "%s\n" "$SEP2"
 }

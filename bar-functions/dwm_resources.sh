@@ -10,11 +10,7 @@ dwm_resources () {
     GPU_FAN=$(sensors | grep fan1 | awk '{print $2}')
 
     printf "%s" "$SEP1"
-    if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "💻 MEM %s/%s CPU %s STO %s/%s: %s" "$MEMUSED" "$MEMTOT" "$CPU" "$STOUSED" "$STOTOT" "$STOPER"
-    else
-        printf "Tcpu %s° Tgpu %s° Fgpu %s" "$CPU" "$GPU" "$GPU_FAN"
-    fi
+    printf "Tc %s° Tg %s° Fg %s" "$CPU" "$GPU" "$GPU_FAN"
     printf "%s\n" "$SEP2"
 }
 
